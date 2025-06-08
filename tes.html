@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Contoh Select2</title>
+
+    <!-- jQuery (wajib untuk Select2) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Select2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <!-- Select2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <style>
+        body {
+            padding: 2rem;
+            font-family: Arial, sans-serif;
+        }
+        .select2-container {
+            width: 100% !important;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-group">
+        <label for="chartSelector">Pilih Chart:</label>
+        <select id="chartSelector" class="form-control js-example-basic-multiple" multiple="multiple" name="charts[]">
+            <option value="all">Semua</option>
+            <option value="pieChartMentah">Pie Mentah</option>
+            <option value="pieChartKeluar">Pie Keluar</option>
+            <option value="barChart">Bar Asal Daerah</option>
+            <option value="barChartNegaraTujuan">Bar Negara Tujuan</option>
+            <option value="lineChartHarga">Line Harga</option>
+            <option value="lineChartEkspor">Line Ekspor</option>
+            <option value="donutChartKategoriProduk">Donut Kategori Produk</option>
+        </select>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('.js-example-basic-multiple').select2({
+                placeholder: "Pilih chart yang ingin ditampilkan",
+                allowClear: true
+            });
+        });
+    </script>
+
+</body>
+</html>

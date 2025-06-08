@@ -1,0 +1,151 @@
+* 
+  {
+    margin: 0;
+    padding: 0;
+  }
+
+  .wave-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #0f3057;
+  }
+
+  button {
+    padding: 12px 24px;
+    background-color: #0f3057;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  section {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: #3586ff;
+    overflow: hidden;
+  }
+
+  section .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("/assets/image/wave.png");
+    background-size: 1000px 100px;
+  }
+
+  section .wave.wave1 {
+    animation: animate 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+  }
+
+  section .wave.wave2 {
+    animation: animate2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+  }
+
+  section .wave.wave3 {
+    animation: animate 20s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15px;
+  }
+
+  section .wave.wave4 {
+    animation: animate2 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20px;
+  }
+
+  section .wave-top {
+    position: absolute;
+    top: 0; /* beda dari yang bawah */
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-image: url("/assets/image/wave.png");
+    background-size: 1000px 100px;
+    transform: rotate(180deg); /* dibalik agar efeknya muncul dari atas */
+  }
+  
+  section .wave-top.wave-top1 {
+    animation: animate 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    top: 0;
+  }
+  
+  section .wave-top.wave-top2 {
+    animation: animate2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    top: 10px;
+  }
+  
+  section .wave-top.wave-top3 {
+    animation: animate 20s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    top: 15px;
+  }
+  
+  section .wave-top.wave-top4 {
+    animation: animate2 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    top: 20px;
+  }
+  
+
+  @keyframes animate {
+    0%
+    {
+        background-position-x: 0;
+    }
+    100%
+    {
+        background-position-x: 1000px;
+    }
+  }
+
+  @keyframes animate2 {
+    0%
+    {
+        background-position-x: 0;
+    }
+    100%
+    {
+        background-position-x: -1000px;
+    }
+  }
+
+  
